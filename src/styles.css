@@ -1,0 +1,115 @@
+body {
+    font-family: "Roboto", Arial, sans-serif;
+    background-image: radial-gradient(circle, #FFFFFF, #FF0000);
+    background-size: 200% 200%;
+    animation: gradient-animation 8s ease-in-out infinite;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes gradient-animation {
+    0%,
+    100% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.home-container {
+    background-color: #ffffff;
+    margin: 30px auto;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    max-width: 960px; /* Adjust this value based on your A4 paper width preference */
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.card.mb-4 {
+    border: 2px solid red;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.card-title {
+    font-size: 1.5rem !important;
+    font-weight: bold !important;
+    margin-bottom: 1rem !important;
+}
+
+.card.mb-4:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.button {
+    border-radius: 4px;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.button:hover {
+    background-color: #c82333;
+    border-color: #c82333;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-container img {
+    margin-left: 40px;
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+.nav-container {
+    background-image: linear-gradient(to right, #dc3545, #ff0066);
+    color: white !important;
+    border-radius: 10px;
+    box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white !important;
+}
+
+.navbar-brand:hover {
+    color: #ffc107 !important;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 20px;
+    color: white !important;
+}
+
+.nav-link:hover {
+    color: #ffc107 !important;
+}
+
+.nav-link.active {
+    border-bottom: 2px solid #ffc107 !important;
+}
