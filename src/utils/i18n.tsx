@@ -15,6 +15,7 @@ const resources = {
             facebookGroup: 'Facebook Group',
             resultsSite: 'Results Site',
             startsList: 'Starts List',
+            bulletinButton: 'Download PDF'
         },
     },
     pl: {
@@ -30,6 +31,7 @@ const resources = {
             facebookGroup: 'Grupa na Facebooku',
             resultsSite: 'Strona wyników',
             startsList: 'Lista startowa',
+            bulletinButton: 'Pobierz PDF'
         },
     },
 };

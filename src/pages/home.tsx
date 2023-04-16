@@ -3,6 +3,7 @@ import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import logo from '../assets/logo.png';
 import Description from '../pages/Description';
 import { useTranslation } from 'react-i18next';
+import DownloadButton from "./DownloadButton";
 
 export const Home: React.FC = () => {
     const { t } = useTranslation();
@@ -29,7 +30,7 @@ export const Home: React.FC = () => {
                         <Card className="mb-4">
                             <Card.Body>
                                 <Card.Title>{t('bulletin')}</Card.Title>
-                                <Button href="https://example.com/biuletin" variant="primary" style={{backgroundColor: 'red'}}>{t('goToBulletin')}</Button>
+                                <DownloadButton />
                             </Card.Body>
                         </Card>
                     </Col>
@@ -37,7 +38,7 @@ export const Home: React.FC = () => {
                         <Card className="mb-4">
                             <Card.Body>
                                 <Card.Title>{t('facebookGroup')}</Card.Title>
-                                <Button href="https://www.facebook.com/groups/your-group-id" variant="primary" style={{backgroundColor: 'red'}}>{t('visitGroup')}</Button>
+                                <Button href="https://www.facebook.com/profile.php?id=100063597109867" variant="outline-danger" target="_blank" rel="noopener noreferrer">{t('visitGroup')}</Button>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -45,7 +46,7 @@ export const Home: React.FC = () => {
                         <Card className="mb-4">
                             <Card.Body>
                                 <Card.Title>{t('resultsSite')}</Card.Title>
-                                <Button href="https://example.com/results" variant="primary" style={{backgroundColor: 'red'}}>{t('viewResults')}</Button>
+                                <Button href="/results" variant="outline-danger">{t('viewResults')}</Button>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -53,7 +54,9 @@ export const Home: React.FC = () => {
                         <Card className="mb-4">
                             <Card.Body>
                                 <Card.Title>{t('startsList')}</Card.Title>
-                                <Button href="https://example.com/starts-list" variant="primary" style={{backgroundColor: 'red'}}>{t('seeStartsList')}</Button>
+                                <Button variant="outline-danger" onClick={() => alert("The start list is not ready yet!")}>
+                                    {t('downloadList')}
+                                </Button>
                             </Card.Body>
                         </Card>
                     </Col>
