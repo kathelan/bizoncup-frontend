@@ -13,7 +13,7 @@ const ResultsPage = () => {
 
     useEffect(() => {
         const fetchResults = async () => {
-            const response = await axios.get(`${apiBaseUrl}/ardf/results`);
+            const response = await axios.get(`${apiBaseUrl}/api/ardf/results`);
             setResults(response.data.COMPETITORS);
         };
         fetchResults();
