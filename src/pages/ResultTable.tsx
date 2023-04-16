@@ -1,9 +1,9 @@
 import React from 'react';
 import { Table } from 'react-bootstrap';
-import { RaceResult } from '../utils/model';
+import {Competitor, RaceResult} from '../utils/model';
 import { useTranslation } from 'react-i18next';
 interface Props {
-    results: RaceResult;
+    results: Competitor[];
     selectedCategory: string;
 }
 
@@ -11,10 +11,10 @@ const ResultTable: React.FC<Props> = ({ results, selectedCategory }) => {
     const { t } = useTranslation();
     const getCompetitorsByCategory = () => {
         if (!selectedCategory) {
-            return results.COMPETITORS;
+            return results;
         }
 
-        return results.COMPETITORS.filter((competitor) => competitor.CAT === selectedCategory);
+        return results.filter((competitor) => competitor.CAT === selectedCategory);
     };
 
     const competitors = getCompetitorsByCategory();
