@@ -23,6 +23,9 @@ export const NavBar = () => {
                 <Nav.Link as={NavLink} to="/">
                     {t('HOME')}
                 </Nav.Link>
+                <Nav.Link as={NavLink} to="/results">
+                    {t('RESULTS')}
+                </Nav.Link>
                 <Nav className="ms-auto">
                     <DropdownButton variant="outline-light" title={t('language')} id="language-dropdown">
                         <Dropdown.Item onClick={() => handleLanguageChange('en')}>English</Dropdown.Item>

@@ -1,5 +1,6 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
+import React from "react";
 
 const resources = {
     en: {
@@ -15,7 +16,18 @@ const resources = {
             facebookGroup: 'Facebook Group',
             resultsSite: 'Results Site',
             startsList: 'Starts List',
-            bulletinButton: 'Download PDF'
+            bulletinButton: 'Download PDF',
+            RESULTS: 'Race Results',
+            categorySelection: 'Choose category',
+            category: 'Category:',
+            btnClear: 'Clear',
+            tableName: 'Name',
+            tableStartTime: 'Start Time',
+            tableFinishTime: 'Finish Time',
+            tableRunTime: 'Run Time',
+            foxesFound: 'Foxes Found',
+            tablePlace: 'Place',
+            tableStationNo: 'Station No.'
         },
     },
     pl: {
@@ -31,7 +43,18 @@ const resources = {
             facebookGroup: 'Grupa na Facebooku',
             resultsSite: 'Strona wyników',
             startsList: 'Lista startowa',
-            bulletinButton: 'Pobierz PDF'
+            bulletinButton: 'Pobierz PDF',
+            RESULTS: 'Wyniki biegu',
+            categorySelection: 'Wybierz kategorię',
+            category: 'Kategorie:',
+            btnClear: 'Wyczyść',
+            tableName: 'Imie i Nazwisko',
+            tableStartTime: 'Czas startu',
+            tableFinishTime: 'Czas mety',
+            tableRunTime: 'Czas biegu',
+            foxesFound: 'Liczba znalezionych lisów',
+            tablePlace: 'Miejsce',
+            tableStationNo: 'Number startowy'
         },
     },
 };

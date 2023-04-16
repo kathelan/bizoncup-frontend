@@ -1,11 +1,14 @@
-import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
 import axios from 'axios';
-import { Container } from 'react-bootstrap';
+import {Container} from 'react-bootstrap';
 import ResultTable from './ResultTable';
 import {RaceResult} from "../utils/model";
-
+import {CategoryFilter} from "./CategoryFilter";
+import { useTranslation } from 'react-i18next';
 const ResultsPage = () => {
     const [results, setResults] = useState([]);
+    const [selectedCategory, setSelectedCategory] = useState<string>('');
+    const { t } = useTranslation();
 
     useEffect(() => {
         const fetchResults = async () => {
@@ -75,10 +78,32 @@ const ResultsPage = () => {
         ]
     };
 
+    const handleCategoryFilter = (category: string) => {
+        setSelectedCategory(category);
+    };
+
+    const getCategories = (results: RaceResult): string[] => {
+        const categories = new Set<string>();
+        results.COMPETITORS.forEach((competitor) => {
+            categories.add(competitor.CAT);
+        });
+        return Array.from(categories);
+    };
+
     return (
         <Container>
-            <h1>Results</h1>
-            <ResultTable results={EXAMPLE_RESULTS} />
+            <h1 className="my-4">{t('RESULTS')}</h1>
+            <CategoryFilter
+                categories={getCategories(EXAMPLE_RESULTS)}
+                onCategorySelect={handleCategoryFilter}
+             selectedCategory={selectedCategory}/>
+            {EXAMPLE_RESULTS && selectedCategory ? (
+                <>
+                    <ResultTable results={EXAMPLE_RESULTS} selectedCategory={selectedCategory} />
+                </>
+            ) : (
+                <p>{t('categorySelection')}</p>
+            )}
         </Container>
     );
 };
