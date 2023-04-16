@@ -7,8 +7,17 @@ interface Props {
     results: RaceResult;
 }
 
+// Define a function to extract all unique categories
+const getCategories = (results: RaceResult): string[] => {
+    const categories = new Set<string>();
+    results.COMPETITORS.forEach((competitor) => {
+        categories.add(competitor.CAT);
+    });
+    return Array.from(categories);
+};
+
 export const ResultTable: React.FC<Props> = ({ results }) => {
-    const categories = ['W19', 'W21', 'W35']; // categories to filter by
+    const categories = getCategories(results);
 
     return (
         <>
