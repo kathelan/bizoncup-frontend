@@ -1,4 +1,4 @@
-import "./ResultTableStyles.css";
+import './ResultTableStyles.css'
 import React from 'react';
 import { Table } from 'react-bootstrap';
 import {Competitor, RaceResult} from '../utils/model';
@@ -38,9 +38,9 @@ const ResultTable: React.FC<Props> = ({ results, selectedCategory }) => {
     const competitors = getCompetitorsByCategory();
 
     return (
-        <div className="result-table-container table-responsive">
+        <>
             <h3>{selectedCategory}</h3>
-            <Table striped bordered hover>
+            <Table striped bordered hover className="result-table table-responsive">
                 <thead>
                 <tr>
                     <th>#</th>
@@ -49,6 +49,7 @@ const ResultTable: React.FC<Props> = ({ results, selectedCategory }) => {
                     <th>{t('tableFinishTime')}</th>
                     <th>{t('tableRunTime')}</th>
                     <th>{t('foxesFound')}</th>
+                    <th>{t('tableStationNo')}</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -62,11 +63,12 @@ const ResultTable: React.FC<Props> = ({ results, selectedCategory }) => {
                         <td>{competitor.FINISH}</td>
                         <td>{competitor.RUNTIME}</td>
                         <td>{competitor.FOX}</td>
+                        <td>{competitor.STNO}</td>
                     </tr>
                 ))}
                 </tbody>
             </Table>
-        </div>
+        </>
     );
 };
 

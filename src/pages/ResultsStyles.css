@@ -1,11 +1,18 @@
 .results-page {
-    margin-left: 2% !important;
-    margin-right: 2% !important;
+    margin: 0;
+    padding: 0;
 }
 
-@media screen and (min-width: 768px) {
+.ResultTable {
+    margin: 0;
+    padding: 0;
+}
+
+
+@media screen and (max-width: 768px) {
     .results-page {
-        margin-left: 3% !important;
-        margin-right: 3% !important;
+        width: 100%;
+        margin-left: 2% !important;
+        margin-right: 2% !important;
     }
 }
