@@ -1,11 +1,11 @@
-import "./ResultsStyles.css";
+import './ResultsStyles.css';
 import {useEffect, useState} from 'react';
-import axios from 'axios';
 import {Container} from 'react-bootstrap';
 import ResultTable from './ResultTable';
-import {Competitor, RaceResult} from "../utils/model";
+import {Competitor} from "../utils/model";
 import {CategoryFilter} from "./CategoryFilter";
 import { useTranslation } from 'react-i18next';
+
 const ResultsPage = () => {
     const [results, setResults] = useState<Competitor[] | null>(null);
     const [selectedCategory, setSelectedCategory] = useState<string>('');
@@ -50,6 +50,7 @@ const ResultsPage = () => {
         };
         fetchResults();
     }, []);
+
     const handleCategoryFilter = (category: string) => {
         setSelectedCategory(category);
     };
@@ -65,7 +66,7 @@ const ResultsPage = () => {
     };
 
     return (
-        <Container>
+        <Container className="results-page">
             <h1 className="my-4">{t('RESULTS')}</h1>
             {results ? (
                 <>
@@ -85,7 +86,6 @@ const ResultsPage = () => {
             )}
         </Container>
     );
-}
-
+};
 
 export default ResultsPage;

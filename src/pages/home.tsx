@@ -59,7 +59,7 @@ export const Home: React.FC = () => {
                             <Card.Body>
                                 <Card.Title>{t('startsList')}</Card.Title>
                                 <Button variant="outline-danger" onClick={() => alert("The start list is not ready yet!")}>
-                                    {t('downloadList')}
+                                    {t('startsListbtn')}
                                 </Button>
                             </Card.Body>
                         </Card>

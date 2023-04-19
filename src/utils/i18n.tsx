@@ -7,7 +7,7 @@ const resources = {
         translation: {
             HOME: 'HOME',
             about: 'About the competition',
-            language: 'Language',
+            language: 'eng',
             competitionDescription1: "Welcome to the Bizon Cup 2023 - a competition in radioorienteering sport in Poland! This year's edition includes not only the traditional radio orienteering sport competition, but also the Polish Sprint Championships. Athletes from all over Poland will compete to become the Polish champion in this exciting and demanding sport.",
             competitionDescription2: "The competition will take place in the beautiful surroundings of Sztutowo, where the beauty of nature will merge with the passion for radio orienteering sports. We can expect difficult but satisfying routes that require precision, speed, and concentration from the competitors.",
             competitionDescription3: "Radio orienteering sports is a discipline that requires not only physical fitness, but also strategic thinking and navigational skills. The competitors will need to use radio signals to find their way to specific points on the course, all while racing against the clock. It's a thrilling and challenging sport that demands the best from its athletes.",
@@ -15,7 +15,7 @@ const resources = {
             bulletin: 'Bulletin',
             facebookGroup: 'Facebook Group',
             resultsSite: 'Results Site',
-            startsList: 'Starts List',
+            startsList: 'Start List',
             bulletinButton: 'Download PDF',
             RESULTS: 'Race Results',
             categorySelection: 'Choose category',
@@ -27,14 +27,17 @@ const resources = {
             tableRunTime: 'Run Time',
             foxesFound: 'Foxes Found',
             tablePlace: 'Place',
-            tableStationNo: 'Station No.'
+            tableStationNo: 'Station No.',
+            viewResults: 'View Results',
+            startsListbtn: 'click to download start list',
+            visitGroup: 'visit group'
         },
     },
     pl: {
         translation: {
             HOME: 'STRONA GŁÓWNA',
             about: 'O zawodach',
-            language: 'Język',
+            language: 'PL',
             competitionDescription1: "Witajcie na Bizon Cup 2023 - zawodach radioorientacji sportowej w Polsce! Tegoroczna edycja to nie tylko tradycyjne zawody w radioorientacji sportowej, ale również Mistrzostwa Polski w sprincie. Zawodnicy z całej Polski będą rywalizować, by zdobyć tytuł mistrza Polski w tej ekscytującej i wymagającej dyscyplinie sportowej.",
             competitionDescription2: "Zawody odbędą się w przepięknej okolicy Sztutowa, gdzie piękno natury złączy się z pasją do radioorientacji sportowej. Czekają nas trudne, ale satysfakcjonujące trasy, które wymagają od zawodników precyzji, szybkości i skupienia.",
             competitionDescription3: "Radioorientacja sportowa to dyscyplina, która wymaga nie tylko dobrej kondycji fizycznej, ale także umiejętności strategicznego myślenia i orientacji na terenie.",
@@ -54,7 +57,10 @@ const resources = {
             tableRunTime: 'Czas biegu',
             foxesFound: 'Liczba znalezionych lisów',
             tablePlace: 'Miejsce',
-            tableStationNo: 'Number startowy'
+            tableStationNo: 'Number startowy',
+            viewResults: 'Zobacz wyniki',
+            startsListbtn: 'Pobierz listę startową',
+            visitGroup: 'Obserwuj nas!'
         },
     },
 };

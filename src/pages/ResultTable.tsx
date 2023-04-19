@@ -1,3 +1,4 @@
+import "./ResultTableStyles.css";
 import React from 'react';
 import { Table } from 'react-bootstrap';
 import {Competitor, RaceResult} from '../utils/model';
@@ -14,13 +15,30 @@ const ResultTable: React.FC<Props> = ({ results, selectedCategory }) => {
             return results;
         }
 
-        return results.filter((competitor) => competitor.CAT === selectedCategory);
+        const sortedCompetitors = results.filter((competitor) => competitor.CAT === selectedCategory)
+            .sort((a, b) => {
+                const aRuntime = timeStringToSeconds(a.RUNTIME);
+                const bRuntime = timeStringToSeconds(b.RUNTIME);
+
+                if (a.FOX !== b.FOX) {
+                    return b.FOX - a.FOX; // sort by max number of FOX
+                } else {
+                    return aRuntime - bRuntime; // sort by lowest RUNTIME
+                }
+            });
+
+        return sortedCompetitors;
+    };
+
+    const timeStringToSeconds = (timeString: string): number => {
+        const [hours, minutes, seconds] = timeString.split(':').map(Number);
+        return (hours * 60 + minutes) * 60 + seconds;
     };
 
     const competitors = getCompetitorsByCategory();
 
     return (
-        <>
+        <div className="result-table-container table-responsive">
             <h3>{selectedCategory}</h3>
             <Table striped bordered hover>
                 <thead>
@@ -31,8 +49,6 @@ const ResultTable: React.FC<Props> = ({ results, selectedCategory }) => {
                     <th>{t('tableFinishTime')}</th>
                     <th>{t('tableRunTime')}</th>
                     <th>{t('foxesFound')}</th>
-                    <th>{t('tablePlace')}</th>
-                    <th>{t('tableStationNo')}</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -46,13 +62,11 @@ const ResultTable: React.FC<Props> = ({ results, selectedCategory }) => {
                         <td>{competitor.FINISH}</td>
                         <td>{competitor.RUNTIME}</td>
                         <td>{competitor.FOX}</td>
-                        <td>{competitor.PLACE}</td>
-                        <td>{competitor.STNO}</td>
                     </tr>
                 ))}
                 </tbody>
             </Table>
-        </>
+        </div>
     );
 };
 
