@@ -5,7 +5,7 @@ import React from "react";
 const resources = {
     en: {
         translation: {
-            home: 'HOME',
+            HOME: 'HOME',
             about: 'About the competition',
             language: 'Language',
             competitionDescription1: "Welcome to the Bizon Cup 2023 - a competition in radioorienteering sport in Poland! This year's edition includes not only the traditional radio orienteering sport competition, but also the Polish Sprint Championships. Athletes from all over Poland will compete to become the Polish champion in this exciting and demanding sport.",
@@ -32,7 +32,7 @@ const resources = {
     },
     pl: {
         translation: {
-            home: 'STRONA GŁÓWNA',
+            HOME: 'STRONA GŁÓWNA',
             about: 'O zawodach',
             language: 'Język',
             competitionDescription1: "Witajcie na Bizon Cup 2023 - zawodach radioorientacji sportowej w Polsce! Tegoroczna edycja to nie tylko tradycyjne zawody w radioorientacji sportowej, ale również Mistrzostwa Polski w sprincie. Zawodnicy z całej Polski będą rywalizować, by zdobyć tytuł mistrza Polski w tej ekscytującej i wymagającej dyscyplinie sportowej.",

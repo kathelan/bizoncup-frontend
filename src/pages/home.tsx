@@ -1,13 +1,17 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import logo from '../assets/logo.png';
 import Description from '../pages/Description';
 import { useTranslation } from 'react-i18next';
 import DownloadButton from "./DownloadButton";
+import i18n from '../utils/i18n';
 
 export const Home: React.FC = () => {
     const { t } = useTranslation();
 
+    useEffect(() => {
+        i18n.changeLanguage('pl');
+    }, [i18n]);
     return (
         <>
             <Container className="mt-5 home-container">

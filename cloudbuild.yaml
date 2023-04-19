@@ -1,0 +1,6 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '--build-arg', 'VITE_APP_API_BASE_URL=$_VITE_APP_API_BASE_URL', '-t', 'gcr.io/$PROJECT_ID/bizoncup-frontend-test', '.']
+
+images:
+  - 'gcr.io/$PROJECT_ID/bizoncup-frontend-test'

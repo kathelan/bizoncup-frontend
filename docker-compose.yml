@@ -1,0 +1,14 @@
+version: "3.4"
+services:
+  bizon-frontend:
+    image: node:alpine
+    container_name: bizon-frontend
+    entrypoint: /bin/sh
+    ports:
+      - 5147:5147
+    working_dir: /srv/app
+    volumes:
+      - type: bind
+        source: ./
+        target: /srv/app
+    tty: true
