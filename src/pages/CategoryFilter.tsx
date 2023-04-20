@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Badge, Button, ListGroup } from 'react-bootstrap';
+import { Badge, Button, ListGroup, Row, Col } from 'react-bootstrap';
 import './CategoryFilterStyles.css';
 import { useTranslation } from 'react-i18next';
 
@@ -19,23 +19,26 @@ export const CategoryFilter: React.FC<Props> = ({ categories, onCategorySelect, 
     };
 
     return (
-        <div className="category-filter">
-            <div className="category-filter-title">{t('category')}</div>
-            <div className="category-filter-items">
-                <ListGroup horizontal>
+        <Row className="category-filter">
+            <Col xs="auto" className="category-filter-title">
+                {t('category')}
+            </Col>
+            <Col className="category-filter-items">
+                <ListGroup horizontal className="flex-wrap">
                     {categories.map((category) => (
                         <ListGroup.Item
                             key={category}
                             active={activeCategory === category}
                             onClick={() => handleCategorySelect(category)}
+                            className="mr-2 mb-2"
                             style={{ cursor: 'pointer' }}
                         >
                             <Badge bg="danger">{category}</Badge>
                         </ListGroup.Item>
                     ))}
                 </ListGroup>
-            </div>
-            <div className="category-filter-clear">
+            </Col>
+            <Col xs="auto" className="category-filter-clear">
                 {activeCategory && (
                     <Button
                         variant="secondary"
@@ -47,7 +50,7 @@ export const CategoryFilter: React.FC<Props> = ({ categories, onCategorySelect, 
                         {t('btnClear')}
                     </Button>
                 )}
-            </div>
-        </div>
+            </Col>
+        </Row>
     );
 };

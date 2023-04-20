@@ -17,8 +17,8 @@ const ResultTable: React.FC<Props> = ({ results, selectedCategory }) => {
 
         const sortedCompetitors = results.filter((competitor) => competitor.CAT === selectedCategory)
             .sort((a, b) => {
-                const aRuntime = timeStringToSeconds(a.RUNTIME);
-                const bRuntime = timeStringToSeconds(b.RUNTIME);
+                const aRuntime = timeStringToSeconds(a.RUNTIME == null ? '0' : a.RUNTIME);
+                const bRuntime = timeStringToSeconds(b.RUNTIME == null ? '0' : b.RUNTIME);
 
                 if (a.FOX !== b.FOX) {
                     return b.FOX - a.FOX; // sort by max number of FOX
@@ -55,7 +55,7 @@ const ResultTable: React.FC<Props> = ({ results, selectedCategory }) => {
                 <tbody>
                 {competitors.map((competitor, index) => (
                     <tr key={index}>
-                        <td>{index + 1}</td>
+                        <td>{competitor.FOX === 0 ? '-' : index + 1}</td>
                         <td>
                             {competitor.FIRSTNAME} {competitor.NAME}
                         </td>
