@@ -5,6 +5,7 @@ import Description from '../pages/Description';
 import { useTranslation } from 'react-i18next';
 import DownloadButton from "./DownloadButton";
 import i18n from '../utils/i18n';
+import DownloadProgramButton from './DownloadProgramButton';
 
 export const Home: React.FC = () => {
     const { t } = useTranslation();
@@ -35,6 +36,14 @@ export const Home: React.FC = () => {
                             <Card.Body>
                                 <Card.Title>{t('bulletin')}</Card.Title>
                                 <DownloadButton />
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col xs={12} md={6} lg={4}>
+                        <Card className="mb-4">
+                            <Card.Body>
+                                <Card.Title>{t('programDesc')}</Card.Title>
+                                <DownloadProgramButton />
                             </Card.Body>
                         </Card>
                     </Col>

@@ -30,7 +30,9 @@ const resources = {
             tableStationNo: 'Station No.',
             viewResults: 'View Results',
             startsListbtn: 'click to download start list',
-            visitGroup: 'visit group'
+            visitGroup: 'visit group',
+            programDesc: 'Competition Plan',
+            programBtn: 'Download PDF'
         },
     },
     pl: {
@@ -60,7 +62,9 @@ const resources = {
             tableStationNo: 'Number startowy',
             viewResults: 'Zobacz wyniki',
             startsListbtn: 'Pobierz listę startową',
-            visitGroup: 'Obserwuj nas!'
+            visitGroup: 'Obserwuj nas!',
+            programDesc: 'Plan zawodów',
+            programBtn: 'Pobierz PDF'
         },
     },
 };
