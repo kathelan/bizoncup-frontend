@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import DownloadButton from "./DownloadButton";
 import i18n from '../utils/i18n';
 import DownloadProgramButton from './DownloadProgramButton';
+import DownloadStartListButton from "./DownloadStartListButton";
 
 export const Home: React.FC = () => {
     const { t } = useTranslation();
@@ -67,9 +68,7 @@ export const Home: React.FC = () => {
                         <Card className="mb-4">
                             <Card.Body>
                                 <Card.Title>{t('startsList')}</Card.Title>
-                                <Button variant="outline-danger" onClick={() => alert("The start list is not ready yet!")}>
-                                    {t('startsListbtn')}
-                                </Button>
+                                <DownloadStartListButton />
                             </Card.Body>
                         </Card>
                     </Col>
